@@ -1,0 +1,100 @@
+
+
+<div class="popular_courses">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-12 col-sm-12">
+        <div class="main_title">
+          <h2 class="mb-3">LISTE DES CATEGORIES</h2>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+      <div class="row" >
+        
+          <div class="col-lg-4">
+            <div class="single_course" *ngFor="let cat of listCategorie">
+              <div class="course_head">
+                <img class="img-fluid" src="assets/img/categorie/{{ cat.image }}" alt="" />
+              </div>
+              <div class="course_content">
+                <span class="price">Show</span>
+                <span class="tag mb-4 d-inline-block">{{ cat.libelle }}</span>
+                <h4 class="mb-3">
+                   <a ype="button" href="http://localhost:4200/detail-categorie" >Detail Categorie</a>
+                 </h4>
+                <h4 class="mb-3">
+                  <button type="button" class="btn btn-outline-danger"(click)="supprimerCategorie(cat.id)">Supprimer Categorie</button>
+                </h4>
+                <h4 class="mb-3">
+                   <a type="button" href="http://localhost:4200/modif-categorie">Modifier Categorie</a>
+                </h4>
+                
+                <p>
+                  One make creepeth man bearing their one firmament won't fowl
+                  meat over sea
+                </p>
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                  <div class="authr_meta">
+                    <img src="assets/img/courses/author1.png" alt="" />
+                    <span class="d-inline-block ml-2">Cameron</span>
+                  </div>
+                  <div class="mt-lg-0 mt-3">
+                    <span class="meta_info mr-4">
+                      <a href="#"> <i class="ti-user mr-2"></i>12</a>
+                    </span>
+                    <span class="meta_info">
+                      <a href="#"> <i class="ti-heart mr-2"></i>35 </a></span >
+                  </div>
+                </div>
+              </div>
+            
+       </div>
+       </div>
+    </div>
+         
+         
+
+         
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <div class="main_title">
+          <a href="http://localhost:4200/categorie" class="primary-btn ml-sm-3 ml-0">Ajouter une Categorie</a>
+        </div>
+      </div>
+     </div>
+
+              
+              <table class="table table-bordered">
+                <thead class="thead-blue">
+                    <tr align="center">
+                        <th scope="col">Libelle</th>
+                        <th scope="col">Image</th>
+     
+                        <th scope="col">Actions</th>
+                   </tr>
+                </thead>
+                 <tbody>
+                   <tr *ngFor="let cat of listCategorie">
+                     <td align="center">{{cat.libelle}}</td>
+                     <td align="center">
+                       <img src="assets/img/categorie/{{ cat.image }}"  width="80" height="80" class="img-fluit"  />
+                      </td>
+     
+                     <td align="center"><button type="button" class="btn btn-outline-danger"(click)="supprimerCategorie(cat.id)">Supprimer</button>
+                     <a type="button"  href="http://localhost:4200/detail-categorie" class="btn btn-outline-success" >Afficher</a>
+                      <a type="button" href="http://localhost:4200/modif-categorie" class="btn btn-outline-primary" >modifier</a></td>
+                   </tr>
+                 </tbody>
+              </table>  
+</div>   
+</div>   
+
+
+
+            
+

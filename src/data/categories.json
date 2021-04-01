@@ -1,0 +1,16 @@
+{
+    "categories": [
+    {
+    "libelle": "Informatique",
+    "id": 1
+    },
+    {
+        "libelle": "History",
+        "id": 2
+        },
+       {
+        "libelle": "Kids",
+            "id": 3
+            }
+        ]
+    }

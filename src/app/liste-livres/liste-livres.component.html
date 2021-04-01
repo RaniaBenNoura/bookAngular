@@ -1,0 +1,39 @@
+
+<h2 align="center">LISTE DES LIVRES</h2>
+<div class="row justify-content-center">
+    <div class="col-lg-5">
+      <div class="main_title">
+        <a href="http://localhost:4200/livres" class="primary-btn ml-sm-3 ml-0">Ajouter une livre</a>
+      </div>
+    </div>
+</div>
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr align="center">
+            <th scope="col">Code ISBN</th>
+            <th scope="col">Date</th>
+            <th scope="col">Titre </th>
+            <th scope="col">Image</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Livre of listLivres">
+        <td>{{Livre.code}}</td>
+        <td>{{Livre.date}}</td>
+        <td>{{Livre.titre}}</td>
+        <td>
+            <img src="assets/img/{{ Livre.image }}"  width="80" height="80" class="img-fluit"  />
+
+        </td>
+
+        <td ><button type="button" class="btn btn-outline-danger"(click)="supprimerLivre(Livre.id)">Supprimer</button>
+            <a type="button" href="http://localhost:4200/detail-livres" class="btn btn-outline-success" >Afficher</a>
+            <a type="button" href="http://localhost:4200/modif-livre" class="btn btn-outline-primary" >modifier</a></td>
+        </tr>
+    </tbody>
+    
+  
+    
+</table>
+
